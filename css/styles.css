@@ -403,3 +403,209 @@ img {
 .page-footer .social-link:focus {
     background-color: #31d0aa;
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    max-width: 50%;
+    max-height: 50%;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 24px;
+}
+
+.button-container > button {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    cursor: pointer;
+    background-color: var(--cornflower);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal > form > h3 {
+    width: 100%;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+    margin-bottom: 16px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    height: 58px;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.input-container > p, .textarea-container > p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
+}
+
+.input-container > label {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    transition: border-color var(--transition-props);
+}
+
+.input-container > label:focus-within {
+    border-color: var(--iris);
+}
+
+.input-container > label > svg {
+    margin: 11px 4px 11px 16px;
+    fill: var(--navy-blue);
+    transition: fill var(--transition-props);
+}
+
+.input-container > label:focus-within > svg {
+    fill: var(--iris);
+}
+
+.input-container > label > input {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.textarea-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    height: 138px;
+    gap: 4px;
+}
+
+.textarea-container > label {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    transition: border-color var(--transition-props);
+    padding-top: 8px;
+    padding-left: 16px;
+}
+
+.textarea-container > label:focus-within {
+    border-color: var(--iris);
+}
+
+
+.textarea-container > label > textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    resize: none;
+}
+
+.textarea-container > label > textarea::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.checkbox-private-policy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-top: 16px;
+}
+
+.checkbox-private-policy > label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
+    margin-left: 8px;
+}
+
+.checkbox-private-policy > label > a {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+}
+
+.send-btn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.send-btn {
+    width: 169px;
+    height: 56px;
+    background-color: var(--iris);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+}
